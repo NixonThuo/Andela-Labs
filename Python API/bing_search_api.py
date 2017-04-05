@@ -1,6 +1,5 @@
 
 import requests
-import json
 
 
 def bing_search(query):
@@ -12,7 +11,7 @@ def bing_search(query):
     # make GET request
     data = requests.get(url, params=payload, headers=headers)
     # get JSON response
-    data = json.loads(data.text)
+    data = data.json()
     return data
 
 
