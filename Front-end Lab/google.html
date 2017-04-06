@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.row > .column {
+    padding: 0 8px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: center;
+    width: 25%;
+}
+
+
+.cursor {
+    cursor: pointer
+}
+
+
+
+img {
+    margin-bottom: -4px;
+}
+
+h1 {
+    color :red;
+}
+
+
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+img.hover-shadow {
+    transition: 0.3s
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+    width: 100%;
+}s
+</style>
+
+<body>
+    <div class="row">
+      <h1 style="text-align:center" >Google</h1>  
+    </div>
+    <center>
+    <div class="column">
+      <input type="text" name="search" placeholder="Search.." class="hover-shadow cursor">
+    </div>
+    </center>
+</body>
+
+</html>
