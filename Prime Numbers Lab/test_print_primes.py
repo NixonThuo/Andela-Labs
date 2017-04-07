@@ -6,9 +6,9 @@ class PrintTest(unittest.TestCase):
     """docstring for MissingNumberTest"""
 
     def test_empty_list(self):
-        self.assertEqual([2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59],
-                         prime_numbers_in_range(60),
-                         msg='should return 0 for empty list')
+        self.assertEqual([],
+                         prime_numbers_in_range(0),
+                         msg='should return [] for empty list')
 
     def test_it_works(self):
         list1 = prime_numbers_in_range(60)
@@ -31,6 +31,7 @@ class PrintTest(unittest.TestCase):
         result = "invalid"
         self.assertEqual(result, prime_numbers_in_range([]),
                          msg='should only accept integers')
+
 
 if __name__ == '__main__':
     unittest.main()
