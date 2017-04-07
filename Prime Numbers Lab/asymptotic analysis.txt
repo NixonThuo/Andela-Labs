@@ -1,0 +1,1 @@
+Big O Notation: O(n) since the number of execution is dependent on the input(max) in my case

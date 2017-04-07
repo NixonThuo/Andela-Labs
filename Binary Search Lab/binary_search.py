@@ -5,8 +5,10 @@ class BinarySearch(list):
         self .extend([x for x in range(b, (a * b) + 1, b)])
         self.length = len(self)
         self.count = 0
-        self.results = {"count": 0, "index": 0}
-
+        if self.length <= 20: 
+            self.results = {"count": 0, "index": 0}
+        else:
+            self.results = {"count": 0, "index": -1}
     def search(self, Phrase):
         Low = 0
         High = len(self) - 1
@@ -23,10 +25,10 @@ class BinarySearch(list):
                 High = Mid - 1
             else:
                 Low = Mid + 1
-        return found
+        return self.results
 
 
 two_to_forty = BinarySearch(20, 2)
 print two_to_forty
-search1 = two_to_forty.search(40)
+search1 = two_to_forty.search(16)
 print search1
